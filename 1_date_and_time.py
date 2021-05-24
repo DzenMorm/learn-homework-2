@@ -7,21 +7,19 @@
 2. Превратите строку "01/01/20 12:10:03.234567" в объект datetime
 
 """
+from datetime import timedelta, datetime
 
 def print_days():
-    """
-    Эта функция вызывается автоматически при запуске скрипта в консоли
-    В ней надо заменить pass на ваш код
-    """
-    pass
+    date_now = datetime.now()
+    print(f"Вчера было {(date_now - timedelta(1)).strftime('%d-%m-%Y')}")
+    print(f"Сегодня {(date_now).strftime('%d-%m-%Y')}")
+    print(f"30 дней назад было {(date_now - timedelta(30)).strftime('%d-%m-%Y')}")
 
 
 def str_2_datetime(date_string):
-    """
-    Эта функция вызывается автоматически при запуске скрипта в консоли
-    В ней надо заменить pass на ваш код
-    """
-    pass
+    date_dt = datetime.strptime(date_string, "%d/%m/%y %H:%M:%S.%f")
+    return date_dt
+
 
 if __name__ == "__main__":
     print_days()

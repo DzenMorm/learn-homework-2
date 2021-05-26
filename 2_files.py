@@ -15,11 +15,11 @@
 def main():
     with open("referat.txt", "r", encoding="utf-8") as f:
         text_referat = f.read()
-        print(len(text_referat.replace("\n", "")))
-        print(len(text_referat.split()))
-        text_referat = text_referat.replace(".", "!")
-        with open("referat2.txt", "w", encoding="utf-8") as f:
-            f.write(text_referat)
+    print(len(text_referat.replace("\n", "")))
+    print(len(text_referat.split()))
+    text_referat = text_referat.replace(".", "!")
+    with open("referat2.txt", "w", encoding="utf-8") as f:
+        f.write(text_referat)
 
 
 if __name__ == "__main__":

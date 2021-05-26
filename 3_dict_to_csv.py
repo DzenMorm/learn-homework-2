@@ -24,9 +24,8 @@ def main(dict_for_csv):
     with open("my_text.csv", "w", encoding="utf-8") as f:
         fields = ["name", "age", "job"]
         writer = csv.DictWriter(f, fields, delimiter=";")
-        writer.writeheader
-        for row in dict_for_csv:
-            writer.writerow(row)
+        writer.writeheader()
+        writer.writerows(name_age_job_dict)
 
 
 if __name__ == "__main__":

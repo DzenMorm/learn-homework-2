@@ -10,10 +10,12 @@
 from datetime import timedelta, datetime
 
 def print_days():
-    date_now = datetime.now()
-    print(f"Вчера было {(date_now - timedelta(1)).strftime('%d-%m-%Y')}")
-    print(f"Сегодня {(date_now).strftime('%d-%m-%Y')}")
-    print(f"30 дней назад было {(date_now - timedelta(30)).strftime('%d-%m-%Y')}")
+    yesteday = (datetime.now() - timedelta(1)).strftime('%d-%m-%Y')
+    today = (datetime.now()).strftime('%d-%m-%Y')
+    ago_30_days = (datetime.now() - timedelta(30)).strftime('%d-%m-%Y')
+    print(f"Вчера было {yesteday}")
+    print(f"Сегодня {today}")
+    print(f"30 дней назад было {ago_30_days}")
 
 
 def str_2_datetime(date_string):
